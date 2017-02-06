@@ -1,0 +1,25 @@
+<project>
+
+    <target name="clean">
+        <delete dir="C:\Users\gdr20\Desktop\source\build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="C:\Users\gdr20\Desktop\source\build\classes"/>
+        <javac srcdir="C:\Users\gdr20\Desktop\source\oata\" destdir="C:\Users\gdr20\Desktop\source\build\classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="C:\Users\gdr20\Desktop\source\build\jar"/>
+        <jar destfile="C:\Users\gdr20\Desktop\source\build\jar\HelloWorld.jar" basedir="C:\Users\gdr20\Desktop\source\build\classes">
+            <manifest>
+                <attribute name="Main-Class" value="oata.HelloWorld"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run">
+        <java jar="C:\Users\gdr20\Desktop\source\build\jar\HelloWorld.jar" fork="true"/>
+    </target>
+
+</project>
